@@ -19,17 +19,17 @@ module.exports = function makeExchange(currency) {
         //Получение колличества 25-центовых монет.
         if (remainder >= 25) {
             result["Q"] = Math.floor(remainder / 25);
-            remainder = currency % 25;
+            remainder = remainder % 25;
         };
         //Получение колличества 10-центовых монет.
         if (remainder >= 10) {
             result["D"] = Math.floor(remainder / 10);
-            remainder = currency % 10;
+            remainder = remainder % 10;
         };
         //Получение колличества 5-центовых монет.
         if (remainder >= 5) {
             result["N"] = Math.floor(remainder / 5);
-            remainder = currency % 5;
+            remainder = remainder % 5;
         };
         //Получение колличества 5-центовых монет.
         if (remainder >= 1) {
